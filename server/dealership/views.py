@@ -54,12 +54,22 @@ DEALERS = [
     },
 ]
 
-CAR_MAKES = [
-    {"name": "Toyota", "models": ["Camry", "Corolla", "RAV4"]},
-    {"name": "Honda", "models": ["Civic", "Accord", "CR-V"]},
-    {"name": "Ford", "models": ["F-150", "Mustang", "Explorer"]},
-    {"name": "Audi", "models": ["A4", "Q5", "A6"]},
-    {"name": "BMW", "models": ["3 Series", "5 Series", "X5"]},
+CAR_MODELS = [
+    {"CarMake": "Toyota", "CarModel": "Camry"},
+    {"CarMake": "Toyota", "CarModel": "Corolla"},
+    {"CarMake": "Toyota", "CarModel": "RAV4"},
+    {"CarMake": "Honda", "CarModel": "Civic"},
+    {"CarMake": "Honda", "CarModel": "Accord"},
+    {"CarMake": "Honda", "CarModel": "CR-V"},
+    {"CarMake": "Ford", "CarModel": "F-150"},
+    {"CarMake": "Ford", "CarModel": "Mustang"},
+    {"CarMake": "Ford", "CarModel": "Explorer"},
+    {"CarMake": "Audi", "CarModel": "A4"},
+    {"CarMake": "Audi", "CarModel": "Q5"},
+    {"CarMake": "Audi", "CarModel": "A6"},
+    {"CarMake": "BMW", "CarModel": "3 Series"},
+    {"CarMake": "BMW", "CarModel": "5 Series"},
+    {"CarMake": "BMW", "CarModel": "X5"},
 ]
 
 REVIEWS = {
@@ -187,7 +197,7 @@ def get_reviews(request, dealer_id):
 
 def get_cars(request):
     """Return available car makes and models."""
-    return JsonResponse({"status": 200, "CarMakes": CAR_MAKES})
+    return JsonResponse({"status": 200, "CarModels": CAR_MODELS})
 
 
 @csrf_exempt

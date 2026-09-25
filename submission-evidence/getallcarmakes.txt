@@ -1,3 +1,67 @@
 $ curl -X GET http://127.0.0.1:8000/djangoapp/get_cars
 
-{"status": 200, "CarMakes": [{"name": "Toyota", "models": ["Camry", "Corolla", "RAV4"]}, {"name": "Honda", "models": ["Civic", "Accord", "CR-V"]}, {"name": "Ford", "models": ["F-150", "Mustang", "Explorer"]}, {"name": "Audi", "models": ["A4", "Q5", "A6"]}, {"name": "BMW", "models": ["3 Series", "5 Series", "X5"]}]}
+{
+  "status": 200,
+  "CarModels": [
+    {
+      "CarMake": "Toyota",
+      "CarModel": "Camry"
+    },
+    {
+      "CarMake": "Toyota",
+      "CarModel": "Corolla"
+    },
+    {
+      "CarMake": "Toyota",
+      "CarModel": "RAV4"
+    },
+    {
+      "CarMake": "Honda",
+      "CarModel": "Civic"
+    },
+    {
+      "CarMake": "Honda",
+      "CarModel": "Accord"
+    },
+    {
+      "CarMake": "Honda",
+      "CarModel": "CR-V"
+    },
+    {
+      "CarMake": "Ford",
+      "CarModel": "F-150"
+    },
+    {
+      "CarMake": "Ford",
+      "CarModel": "Mustang"
+    },
+    {
+      "CarMake": "Ford",
+      "CarModel": "Explorer"
+    },
+    {
+      "CarMake": "Audi",
+      "CarModel": "A4"
+    },
+    {
+      "CarMake": "Audi",
+      "CarModel": "Q5"
+    },
+    {
+      "CarMake": "Audi",
+      "CarModel": "A6"
+    },
+    {
+      "CarMake": "BMW",
+      "CarModel": "3 Series"
+    },
+    {
+      "CarMake": "BMW",
+      "CarModel": "5 Series"
+    },
+    {
+      "CarMake": "BMW",
+      "CarModel": "X5"
+    }
+  ]
+}
