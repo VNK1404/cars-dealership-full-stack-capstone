@@ -220,6 +220,24 @@ def add_review(request):
 
 
 @csrf_exempt
+def analyze_review_sentiment_view(request):
+    """Sentiment analysis endpoint."""
+    if request.method == "POST":
+        try:
+            data = json.loads(request.body.decode("utf-8"))
+            text = data.get("text", "")
+            sentiment = analyze_review_sentiment(text)
+            return JsonResponse({"status": 200, "text": text, "sentiment": sentiment})
+        except Exception as e:
+            return JsonResponse({"status": 400, "error": str(e)}, status=400)
+    elif request.method == "GET":
+        text = request.GET.get("text", "")
+        sentiment = analyze_review_sentiment(text)
+        return JsonResponse({"status": 200, "text": text, "sentiment": sentiment})
+    return JsonResponse({"status": 405, "error": "Method not allowed"}, status=405)
+
+
+@csrf_exempt
 def login_user(request):
     """Login handler mock."""
     if request.method == "POST":

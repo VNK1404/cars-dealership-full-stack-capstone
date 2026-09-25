@@ -25,6 +25,10 @@ urlpatterns = [
     path("add_review/", views.add_review, name="add_review"),
     path("add_review", views.add_review, name="add_review_no_slash"),
     path("djangoapp/add_review", views.add_review, name="djangoapp_add_review"),
+    # Sentiment Analysis
+    path("analyze/", views.analyze_review_sentiment_view, name="analyze_sentiment"),
+    path("analyze", views.analyze_review_sentiment_view, name="analyze_sentiment_no_slash"),
+    path("djangoapp/analyze", views.analyze_review_sentiment_view, name="djangoapp_analyze"),
     # Auth
     path("login/", views.login_user, name="login"),
     path("login", views.login_user, name="login_no_slash"),
