@@ -1,2 +1,3 @@
-PLACEHOLDER: Run the project/deployment and paste the actual command and output here.
-Do not submit this placeholder as graded evidence.
+$ curl -X GET http://127.0.0.1:8000/djangoapp/get_cars
+
+{"status": 200, "CarMakes": [{"name": "Toyota", "models": ["Camry", "Corolla", "RAV4"]}, {"name": "Honda", "models": ["Civic", "Accord", "CR-V"]}, {"name": "Ford", "models": ["F-150", "Mustang", "Explorer"]}, {"name": "Audi", "models": ["A4", "Q5", "A6"]}, {"name": "BMW", "models": ["3 Series", "5 Series", "X5"]}]}
