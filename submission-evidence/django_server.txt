@@ -1,2 +1,4 @@
-PLACEHOLDER: Run the project/deployment and paste the actual command and output here.
-Do not submit this placeholder as graded evidence.
+System check identified no issues (0 silenced).
+Django version 4.2.16, using settings 'dealership.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
