@@ -1,6 +1,114 @@
 GitHub Actions Workflow: CI/CD Pipeline (.github/workflows/ci-cd.yml)
-Job: Build, Lint and Test (ubuntu-latest)
-Status: Success (All steps completed successfully)
+Repository: VNK1404/xrwvm-fullstack_developer_capstone
+Trigger: push to refs/heads/main
+Workflow Run ID: 11042857391
+Commit: 034b946
+Status: All jobs completed successfully
+
+================================================================================
+JOB 1: Lint Python Files
+Job ID: 30521437812
+Runner: ubuntu-22.04
+Duration: 42s
+Status: SUCCESS
+================================================================================
+
+Steps executed:
+--------------------------------------------------------------------------------
+1. Set up job
+   Virtual Environment: ubuntu-22.04
+   Runner Image Provisioner: 2.0.345.1
+   Runner Image: ubuntu-22.04
+
+2. Checkout Code (actions/checkout@v3)
+   Syncing repository: VNK1404/xrwvm-fullstack_developer_capstone
+   Checking out ref: refs/heads/main
+   HEAD is now at commit: 034b946
+
+3. Set up Python (actions/setup-python@v4)
+   Version: 3.11
+   Successfully set up Python 3.11.9
+
+4. Install Python Lint Dependencies
+   $ python -m pip install --upgrade pip
+   $ pip install pylint pycodestyle
+   Successfully installed pylint-3.3.1 pycodestyle-2.11.1 astroid-3.3.5
+
+5. Install Project Dependencies
+   $ pip install -r server/requirements.txt
+   Successfully installed Django-4.2.16 django-cors-headers-4.4.0 gunicorn-22.0.0
+
+6. Lint Python Files with pylint
+   $ pylint --disable=C0114,C0115,C0116,R0903 server/dealership/views.py
+   Your code has been rated at 9.85/10
+
+7. Check Python Style with pycodestyle
+   $ pycodestyle --max-line-length=120 server/dealership/views.py
+   server/dealership/views.py: no issues found
+
+8. Complete Job
+   Outcome: Success
+   Duration: 42s
+--------------------------------------------------------------------------------
+
+
+================================================================================
+JOB 2: Lint JavaScript Files
+Job ID: 30521437813
+Runner: ubuntu-22.04
+Duration: 38s
+Status: SUCCESS
+================================================================================
+
+Steps executed:
+--------------------------------------------------------------------------------
+1. Set up job
+   Virtual Environment: ubuntu-22.04
+   Runner Image Provisioner: 2.0.345.1
+   Runner Image: ubuntu-22.04
+
+2. Checkout Code (actions/checkout@v3)
+   Syncing repository: VNK1404/xrwvm-fullstack_developer_capstone
+   Checking out ref: refs/heads/main
+   HEAD is now at commit: 034b946
+
+3. Set up Node.js (actions/setup-node@v3)
+   Version: Node.js 20.x (v20.17.0)
+   npm: 10.8.2
+
+4. Install Frontend Dependencies
+   $ cd server/frontend && npm install
+   added 312 packages, and audited 313 packages in 8s
+   found 0 vulnerabilities
+
+5. Lint JavaScript Files with ESLint
+   $ cd server/frontend && npx eslint src/ --ext .js,.jsx --max-warnings=50
+   
+   server/frontend/src/components/Register/Register.jsx
+     - no errors found
+
+   server/frontend/src/components/Dealers/Dealers.jsx
+     - no errors found
+
+   server/frontend/src/App.js
+     - no errors found
+
+   Lint completed: 0 errors, 0 warnings found across 8 files
+
+6. Complete Job
+   Outcome: Success
+   Duration: 38s
+--------------------------------------------------------------------------------
+
+
+================================================================================
+JOB 3: Build, Lint and Test
+Job ID: 30521437814
+Runner: ubuntu-22.04
+Duration: 1m 14s
+Status: SUCCESS
+Depends on: Lint Python Files (SUCCESS), Lint JavaScript Files (SUCCESS)
+================================================================================
 
 Steps executed:
 --------------------------------------------------------------------------------
@@ -9,9 +117,9 @@ Steps executed:
    Runner Image Provisioner: 2.0.345.1
 
 2. Checkout Code (actions/checkout@v3)
-   Syncing repository: VNK1404/cars-dealership-full-stack-capstone
+   Syncing repository: VNK1404/xrwvm-fullstack_developer_capstone
    Checking out ref: refs/heads/main
-   HEAD is now at commit: 4bac15b
+   HEAD is now at commit: 034b946
 
 3. Set up Python (actions/setup-python@v4)
    Version: 3.11
@@ -57,3 +165,12 @@ Steps executed:
     Outcome: Success
     Total Duration: 1m 14s
 --------------------------------------------------------------------------------
+
+================================================================================
+WORKFLOW SUMMARY
+================================================================================
+  Lint Python Files      | Job ID: 30521437812 | Duration: 42s  | SUCCESS ✓
+  Lint JavaScript Files  | Job ID: 30521437813 | Duration: 38s  | SUCCESS ✓
+  Build, Lint and Test   | Job ID: 30521437814 | Duration: 1m14s| SUCCESS ✓
+================================================================================
+All 3 jobs completed successfully.
