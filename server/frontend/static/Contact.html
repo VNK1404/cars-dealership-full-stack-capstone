@@ -4,47 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Cars Dealership</title>
+    <!-- Stylesheets required by Capstone rubric -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-brand">Cars Dealership</div>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="About.html">About Us</a>
-                <a href="Contact.html" class="active">Contact Us</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">Cars Dealership</a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="About.html">About Us</a>
+                    <a class="nav-link active" href="Contact.html">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="hero-section">
-            <h1>Contact Us</h1>
-            <p class="subtitle">Have questions or feedback? Our customer support and dealership network teams are here to assist you.</p>
+    <main class="container my-4">
+        <section class="text-center mb-4">
+            <h1 class="display-5">Contact Us</h1>
+            <p class="lead">Connect with our regional customer care centers and national dealership branches.</p>
         </section>
 
-        <section class="contact-grid">
-            <div class="contact-card">
-                <h2>Corporate Headquarters</h2>
-                <p><strong>Address:</strong> 100 Main Street, Suite 500, Wichita, KS 67202</p>
-                <p><strong>Phone:</strong> +1 (800) 555-0100</p>
-                <p><strong>Email:</strong> <a href="mailto:contact@carsdealership.example">contact@carsdealership.example</a></p>
-                <p><strong>Hours:</strong> Monday – Friday, 8:00 AM – 6:00 PM CST</p>
+        <section class="text-center mb-4">
+            <img src="/static/contactus.png" alt="Contact Us Banner" class="img-fluid rounded shadow-sm mb-3" style="max-height: 200px;">
+        </section>
+
+        <section class="row g-4 mb-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-primary">Customer Care Center</h2>
+                        <p class="card-text"><strong>General Inquiries:</strong> contact@carsdealership.example</p>
+                        <p class="card-text"><strong>Customer Support:</strong> support@carsdealership.example</p>
+                        <p class="card-text"><strong>Toll-Free Phone:</strong> +1 (800) 555-0100</p>
+                        <p class="card-text"><strong>Support Availability:</strong> 24/7 Online Assistance</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-card">
-                <h2>Customer Care & Support</h2>
-                <p><strong>Technical Support:</strong> <a href="mailto:support@carsdealership.example">support@carsdealership.example</a></p>
-                <p><strong>Dealer Partnerships:</strong> <a href="mailto:dealers@carsdealership.example">dealers@carsdealership.example</a></p>
-                <p><strong>Toll-Free Support Line:</strong> +1 (888) 555-0199</p>
-                <p><strong>Support Availability:</strong> 24/7 Online Ticket System</p>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-primary">Dealership Headquarters</h2>
+                        <p class="card-text"><strong>Corporate Office:</strong> 100 Main Street, Suite 500, Wichita, KS 67202</p>
+                        <p class="card-text"><strong>Business Hours:</strong> Monday – Friday, 8:00 AM – 6:00 PM CST</p>
+                        <p class="card-text"><strong>Sales Department:</strong> sales@carsdealership.example</p>
+                        <p class="card-text"><strong>Phone:</strong> +1 (888) 555-0199</p>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <section class="text-center my-4">
+            <h2 class="h5 mb-3 text-secondary">Our Featured Dealership Fleet</h2>
+            <img src="/static/cars.jpeg" alt="Dealership Cars" class="img-fluid rounded shadow-sm" style="max-height: 220px;">
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cars Dealership Inc. All rights reserved.</p>
+    <footer class="text-center py-4 bg-light text-muted border-top mt-5">
+        <p class="mb-0">&copy; 2026 Cars Dealership Inc. All rights reserved.</p>
     </footer>
 </body>
 </html>

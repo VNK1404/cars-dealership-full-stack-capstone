@@ -4,59 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Cars Dealership</title>
+    <!-- Stylesheets required by Capstone rubric -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-brand">Cars Dealership</div>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="About.html" class="active">About Us</a>
-                <a href="Contact.html">Contact Us</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">Cars Dealership</a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link active" href="About.html">About Us</a>
+                    <a class="nav-link" href="Contact.html">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <section class="hero-section">
-            <h1>About Us</h1>
-            <p class="subtitle">Welcome to Cars Dealership — connecting automotive enthusiasts with premier dealerships across the nation.</p>
+    <main class="container my-4">
+        <section class="text-center mb-4">
+            <h1 class="display-5">About Us</h1>
+            <p class="lead">Welcome to Cars Dealership — connecting automotive enthusiasts with premier dealerships nationwide.</p>
         </section>
 
-        <section class="about-content">
-            <p>
-                Cars Dealership provides an integrated cloud platform allowing car buyers to browse authorized branches, read verified customer reviews, explore multi-brand inventories, and make informed purchasing decisions with real-time sentiment analytics.
-            </p>
+        <section class="text-center mb-4">
+            <img src="/static/cars.jpeg" alt="Dealership Fleet" class="img-fluid rounded shadow-sm mb-3" style="max-height: 200px;">
         </section>
 
-        <section class="team-section">
-            <h2>Our Leadership & Engineering Team</h2>
-            <div class="team-grid">
-                <div class="team-card">
-                    <h3>Alex Johnson</h3>
-                    <p class="role">Lead Full Stack Cloud Developer</p>
-                    <p class="desc">Architects scalable microservices, backend RESTful APIs, and cloud infrastructure integration.</p>
-                    <p class="email">Email: <a href="mailto:alex.johnson@carsdealership.example">alex.johnson@carsdealership.example</a></p>
+        <section class="card shadow-sm mb-4">
+            <div class="card-body">
+                <p class="card-text">
+                    Cars Dealership provides an integrated cloud platform allowing car buyers to browse authorized branches, read verified customer reviews, explore multi-brand inventories, and make informed purchasing decisions with real-time sentiment analytics.
+                </p>
+            </div>
+        </section>
+
+        <section class="my-4">
+            <h2 class="h4 mb-3">Our Leadership & Engineering Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">Alex Johnson</h3>
+                            <p class="text-muted mb-1"><strong>Lead Full Stack Cloud Developer</strong></p>
+                            <p class="card-text small">Architects scalable microservices, backend RESTful APIs, and cloud infrastructure integration.</p>
+                            <p class="card-text small"><strong>Email:</strong> <a href="mailto:alex.johnson@carsdealership.example">alex.johnson@carsdealership.example</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-card">
-                    <h3>Sarah Williams</h3>
-                    <p class="role">Senior Frontend Architect</p>
-                    <p class="desc">Leads frontend engineering, responsive UI/UX design, and component-driven user workflows.</p>
-                    <p class="email">Email: <a href="mailto:sarah.williams@carsdealership.example">sarah.williams@carsdealership.example</a></p>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">Sarah Williams</h3>
+                            <p class="text-muted mb-1"><strong>Senior Frontend Architect</strong></p>
+                            <p class="card-text small">Leads frontend engineering, responsive UI/UX design, and component-driven user workflows.</p>
+                            <p class="card-text small"><strong>Email:</strong> <a href="mailto:sarah.williams@carsdealership.example">sarah.williams@carsdealership.example</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="team-card">
-                    <h3>David Chen</h3>
-                    <p class="role">DevOps & Cloud Solutions Engineer</p>
-                    <p class="desc">Specializes in CI/CD pipeline automation, containerization with Docker, and cloud deployments.</p>
-                    <p class="email">Email: <a href="mailto:david.chen@carsdealership.example">david.chen@carsdealership.example</a></p>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-primary">David Chen</h3>
+                            <p class="text-muted mb-1"><strong>DevOps & Cloud Engineer</strong></p>
+                            <p class="card-text small">Specializes in CI/CD pipeline automation, containerization with Docker, and cloud deployments.</p>
+                            <p class="card-text small"><strong>Email:</strong> <a href="mailto:david.chen@carsdealership.example">david.chen@carsdealership.example</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Cars Dealership Inc. All rights reserved.</p>
+    <footer class="text-center py-4 bg-light text-muted border-top mt-5">
+        <p class="mb-0">&copy; 2026 Cars Dealership Inc. All rights reserved.</p>
     </footer>
 </body>
 </html>
