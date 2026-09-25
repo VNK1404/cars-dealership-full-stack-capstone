@@ -239,13 +239,13 @@ def analyze_review_sentiment_view(request):
 
 @csrf_exempt
 def login_user(request):
-    """Login handler mock."""
+    """Login handler returning {"userName": username, "status": "Authenticated"}."""
     if request.method == "POST":
         try:
             data = json.loads(request.body.decode("utf-8"))
             username = data.get("userName")
             if username:
-                return JsonResponse({"status": True, "userName": username})
+                return JsonResponse({"userName": username, "status": "Authenticated"})
             return JsonResponse({"status": False, "error": "Username required"}, status=400)
         except Exception as e:
             return JsonResponse({"status": False, "error": str(e)}, status=400)
