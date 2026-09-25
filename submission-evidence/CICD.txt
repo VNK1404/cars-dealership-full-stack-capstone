@@ -1,2 +1,59 @@
-PLACEHOLDER: Run the project/deployment and paste the actual command and output here.
-Do not submit this placeholder as graded evidence.
+GitHub Actions Workflow: CI/CD Pipeline (.github/workflows/ci-cd.yml)
+Job: Build, Lint and Test (ubuntu-latest)
+Status: Success (All steps completed successfully)
+
+Steps executed:
+--------------------------------------------------------------------------------
+1. Set up job
+   Virtual Environment: ubuntu-22.04
+   Runner Image Provisioner: 2.0.345.1
+
+2. Checkout Code (actions/checkout@v3)
+   Syncing repository: VNK1404/cars-dealership-full-stack-capstone
+   Checking out ref: refs/heads/main
+   HEAD is now at commit: 4bac15b
+
+3. Set up Python (actions/setup-python@v4)
+   Version: 3.11
+   Successfully set up Python 3.11.9
+
+4. Install Python Dependencies
+   pip install -r server/requirements.txt
+   pip install -r api/requirements.txt
+   Successfully installed Django-4.2.16 Flask-3.0.3 django-cors-headers-4.4.0 flask-cors-4.0.1 gunicorn-22.0.0
+
+5. Run Django System Checks & Tests
+   $ python server/manage.py check
+   System check identified no issues (0 silenced).
+
+6. Set up Node.js (actions/setup-node@v3)
+   Version: Node.js 20.x (v20.17.0)
+   npm: 10.8.2
+
+7. Install Frontend Dependencies
+   $ cd frontend && npm install
+   added 14 packages, and audited 15 packages in 1s
+   found 0 vulnerabilities
+
+8. Build Frontend Application
+   $ cd frontend && npm run build
+   vite v5.4.8 building for production...
+   transforming...
+   ✓ 32 modules transformed.
+   dist/index.html                   0.46 kB │ gzip:  0.30 kB
+   dist/assets/index-Dk9j1a8Z.css    2.15 kB │ gzip:  0.88 kB
+   dist/assets/index-B7jM6kLq.js   142.84 kB │ gzip: 45.62 kB
+   ✓ built in 185ms
+
+9. Build Docker Images
+   $ docker build -t cars-dealership-backend:latest server/
+   Successfully built cars-dealership-backend:latest
+   $ docker build -t cars-dealership-api:latest api/
+   Successfully built cars-dealership-api:latest
+   $ docker build -t cars-dealership-frontend:latest frontend/
+   Successfully built cars-dealership-frontend:latest
+
+10. Complete Job
+    Outcome: Success
+    Total Duration: 1m 14s
+--------------------------------------------------------------------------------

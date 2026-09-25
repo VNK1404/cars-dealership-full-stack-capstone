@@ -1,0 +1,58 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    name: Build, Lint and Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r server/requirements.txt
+        pip install -r api/requirements.txt
+
+    - name: Run Django System Checks & Tests
+      run: |
+        python server/manage.py check
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: "20"
+
+    - name: Install Frontend Dependencies
+      run: |
+        cd frontend
+        npm ci || npm install
+
+    - name: Build Frontend Application
+      run: |
+        cd frontend
+        npm run build
+
+    - name: Build Backend Docker Image
+      run: |
+        docker build -t cars-dealership-backend:latest server/
+
+    - name: Build API Docker Image
+      run: |
+        docker build -t cars-dealership-api:latest api/
+
+    - name: Build Frontend Docker Image
+      run: |
+        docker build -t cars-dealership-frontend:latest frontend/
