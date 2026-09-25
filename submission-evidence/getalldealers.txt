@@ -1,3 +1,55 @@
 $ curl -X GET http://127.0.0.1:8000/djangoapp/get_dealers
 
-{"status": 200, "dealers": [{"id": 1, "full_name": "Downtown Motors", "city": "Wichita", "state": "Kansas", "st": "KS", "address": "100 Main Street", "zip": "67202", "lat": "37.6872", "long": "-97.3301", "short_name": "Downtown"}, {"id": 2, "full_name": "Prairie Auto Center", "city": "Topeka", "state": "Kansas", "st": "KS", "address": "450 Prairie Ave", "zip": "66603", "lat": "39.0473", "long": "-95.6752", "short_name": "Prairie"}, {"id": 3, "full_name": "Metro Cars", "city": "Dallas", "state": "Texas", "st": "TX", "address": "789 Commerce St", "zip": "75201", "lat": "32.7767", "long": "-96.7970", "short_name": "Metro"}, {"id": 4, "full_name": "Austin Speedways", "city": "Austin", "state": "Texas", "st": "TX", "address": "200 Congress Ave", "zip": "78701", "lat": "30.2672", "long": "-97.7431", "short_name": "Austin"}]}
+{
+  "status": 200,
+  "dealers": [
+    {
+      "id": 1,
+      "full_name": "Downtown Motors",
+      "city": "Wichita",
+      "state": "Kansas",
+      "st": "KS",
+      "address": "100 Main Street",
+      "zip": "67202",
+      "lat": "37.6872",
+      "long": "-97.3301",
+      "short_name": "Downtown"
+    },
+    {
+      "id": 2,
+      "full_name": "Prairie Auto Center",
+      "city": "Topeka",
+      "state": "Kansas",
+      "st": "KS",
+      "address": "450 Prairie Ave",
+      "zip": "66603",
+      "lat": "39.0473",
+      "long": "-95.6752",
+      "short_name": "Prairie"
+    },
+    {
+      "id": 3,
+      "full_name": "Metro Cars",
+      "city": "Dallas",
+      "state": "Texas",
+      "st": "TX",
+      "address": "789 Commerce St",
+      "zip": "75201",
+      "lat": "32.7767",
+      "long": "-96.7970",
+      "short_name": "Metro"
+    },
+    {
+      "id": 4,
+      "full_name": "Austin Speedways",
+      "city": "Austin",
+      "state": "Texas",
+      "st": "TX",
+      "address": "200 Congress Ave",
+      "zip": "78701",
+      "lat": "30.2672",
+      "long": "-97.7431",
+      "short_name": "Austin"
+    }
+  ]
+}
