@@ -1,4 +1,4 @@
-# Cars Dealership Full-Stack Cloud Development Capstone
+# fullstack_developer_capstone
 
 A full-stack cloud application designed for national car dealership management, multi-branch catalog browsing, user authentication, customer review submissions, and sentiment analysis.
 
