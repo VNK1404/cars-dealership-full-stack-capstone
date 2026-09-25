@@ -38,6 +38,8 @@ urlpatterns = [
     path("analyze/", views.analyze_review_sentiment_view, name="analyze_sentiment"),
     path("analyze", views.analyze_review_sentiment_view, name="analyze_sentiment_no_slash"),
     path("djangoapp/analyze", views.analyze_review_sentiment_view, name="djangoapp_analyze"),
+    path("analyze/<str:text>", views.analyze_by_text, name="analyze_by_text"),
+    path("analyze/<str:text>/", views.analyze_by_text, name="analyze_by_text_slash"),
     # Auth
     path("login/", views.login_user, name="login"),
     path("login", views.login_user, name="login_no_slash"),

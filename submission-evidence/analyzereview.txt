@@ -1,5 +1,7 @@
-$ curl -X POST http://127.0.0.1:8000/djangoapp/analyze \
-  -H "Content-Type: application/json" \
-  -d '{"text": "Fantastic services"}'
+$ curl -X GET http://127.0.0.1:8000/analyze/Fantastic%20services
 
-{"status": 200, "text": "Fantastic services", "sentiment": "positive"}
+{
+  "status": 200,
+  "text": "Fantastic services",
+  "sentiment": "positive"
+}

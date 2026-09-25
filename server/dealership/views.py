@@ -233,6 +233,12 @@ def add_review(request):
     return JsonResponse({"status": 405, "error": "Method not allowed"}, status=405)
 
 
+def analyze_by_text(request, text):
+    """Handle GET /analyze/<text> path-based sentiment analysis."""
+    sentiment = analyze_review_sentiment(text)
+    return JsonResponse({"status": 200, "text": text, "sentiment": sentiment})
+
+
 @csrf_exempt
 def analyze_review_sentiment_view(request):
     """Sentiment analysis endpoint."""
